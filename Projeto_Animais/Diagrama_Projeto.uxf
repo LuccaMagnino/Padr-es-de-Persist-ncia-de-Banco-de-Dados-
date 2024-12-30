@@ -1,0 +1,70 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>50</x><y>80</y><w>210</w><h>270</h></coordinates><panel_attributes>&lt;&lt;Entity&gt;&gt;
+Package::Animal
+{Some Properties}
+--
+-nome: String
+-idade: int
+-habitat: String
+--
++getNome(): String
++setNome(nome: String)
++getIdade(): int
++setIdade(idade: int)
++getHabitat(): String
++setHabitat(habitat: String)
+--
+Responsibilities
+-- Armazena informações sobre
+ o animal e seu habitat.</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>400</x><y>100</y><w>210</w><h>220</h></coordinates><panel_attributes>&lt;&lt;Entity&gt;&gt;
+Package::Habitat
+{Some Properties}
+--
+-tipo: String
+-localizacao: String
+--
++getTipo(): String
++setTipo(tipo: String)
++getLocalizacao(): String
++setLocalizacao(localizacao: String)
+--
+Responsibilities
+-- Define o tipo e localização 
+do habitat do animal.</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>400</x><y>410</y><w>210</w><h>190</h></coordinates><panel_attributes>&lt;&lt;Service&gt;&gt;
+Package::ConexaoPostgreSQL
+{Some Properties}
+--
+-url: String
+-usuario: String
+-senha: String
+--
++conectar(): Connection
+--
+Responsibilities
+-- Conecta ao banco de
+ dados PostgreSQL.</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>40</x><y>420</y><w>210</w><h>170</h></coordinates><panel_attributes>&lt;&lt;DAO&gt;&gt;
+Package::AnimalDAO
+{Some Properties}
+--
++inserir(animal: Animal): void
++listar(): List&lt;Animal&gt;
+--
+Responsibilities
+--Realiza operações no banco de
+ dados relacionadas aos animais.</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>20</x><y>670</y><w>240</w><h>170</h></coordinates><panel_attributes>&lt;&lt;Service&gt;&gt;
+Package::GerenciadorAnimais
+{Some Properties}
+--
++adicionarAnimal(animal: Animal): void
++listarAnimais(): List&lt;Animal&gt;
+--
+Responsibilities
+-- Gerencia a adição e listagem
+ de animais.</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>410</x><y>670</y><w>210</w><h>160</h></coordinates><panel_attributes>&lt;&lt;Stereotype&gt;&gt;
+Package::Main
+{Some Properties}
+--
++main(args: String[]): void
+--
+Responsibilities
+-- Método principal para inicializar 
+o programa.</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>250</x><y>190</y><w>170</w><h>40</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;20;150;20</additional_attributes></element><element><id>Relation</id><coordinates><x>240</x><y>490</y><w>180</w><h>30</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>160;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>130</x><y>340</y><w>30</w><h>100</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>130</x><y>580</y><w>30</w><h>110</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>250</x><y>740</y><w>180</w><h>30</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>10;10;160;10</additional_attributes></element></diagram>
